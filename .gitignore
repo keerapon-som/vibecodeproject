@@ -42,3 +42,9 @@ next-env.d.ts
 # uploads
 /public/uploads/*
 !public/uploads/.gitkeep
+
+# video files
+*.mp4
+*.webm
+*.mov
+*.avi
