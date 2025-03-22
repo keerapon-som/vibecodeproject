@@ -1,77 +1,93 @@
-# Video Streaming Application
+# VibeCode - Video Streaming Platform
 
-A modern video streaming web application built with Next.js, featuring user authentication and video upload capabilities.
+A modern video streaming platform built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Features
 
-- User authentication with email/password
+- User authentication with NextAuth.js
 - Video upload and streaming
-- Protected routes
+- Responsive dashboard
+- View tracking for videos
 - Modern UI with Tailwind CSS
 - PostgreSQL database with Prisma ORM
 
+## Tech Stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- NextAuth.js
+- Prisma ORM
+- PostgreSQL
+- React Player
+
 ## Prerequisites
 
-- Node.js 18.x or later
-- PostgreSQL 14.x or later
-- npm or yarn
+- Node.js 18+ and npm
+- Docker and Docker Compose
+- PostgreSQL (or use Docker)
 
-## Setup
+## Getting Started
 
 1. Clone the repository:
-```bash
-git clone <repository-url>
-cd videostream
-```
+   ```bash
+   git clone https://github.com/keerapon-som/vibecodeproject.git
+   cd vibecodeproject
+   ```
 
 2. Install dependencies:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. Set up the database:
-```bash
-# Create a PostgreSQL database named 'videostream'
-createdb videostream
+   ```bash
+   # Start PostgreSQL using Docker
+   docker-compose up -d
 
-# Run database migrations
-npx prisma migrate dev
-```
+   # Run database migrations
+   npx prisma migrate dev
+   ```
 
 4. Create a `.env` file in the root directory with the following variables:
-```env
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/videostream?schema=public"
-NEXTAUTH_SECRET="your-secret-key-here"
-NEXTAUTH_URL="http://localhost:3000"
-JWT_SECRET="your-jwt-secret-here"
-```
+   ```
+   DATABASE_URL="postgresql://postgres:postgres@localhost:5432/videostream"
+   NEXTAUTH_SECRET="your-secret-here"
+   JWT_SECRET="your-jwt-secret-here"
+   NEXTAUTH_URL="http://localhost:3000"
+   ```
 
-5. Start the development server:
-```bash
-npm run dev
-```
+5. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-The application will be available at http://localhost:3000
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
 
-- `/src/app` - Next.js app router pages and API routes
-- `/src/components` - React components
-- `/prisma` - Database schema and migrations
-- `/public/uploads` - Directory for storing uploaded videos
-
-## API Routes
-
-- `/api/auth/*` - Authentication endpoints
-- `/api/videos` - Video management endpoints
+```
+src/
+├── app/                    # Next.js app directory
+│   ├── api/               # API routes
+│   ├── auth/              # Authentication pages
+│   └── dashboard/         # Dashboard pages
+├── components/            # React components
+├── lib/                   # Utility functions and configurations
+└── types/                 # TypeScript type definitions
+```
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Learn More
 
