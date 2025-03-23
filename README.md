@@ -1,4 +1,4 @@
-# Video Streaming Platform
+# Video Streaming Platform - vibecodeproject
 
 A full-stack video streaming platform with Next.js frontend and Go Fiber backend.
 
@@ -87,4 +87,4 @@ The platform provides real-time progress updates during video transcoding operat
 - Go
 - Fiber
 - Go modules
-- FFmpeg for video processing 
+- FFmpeg for video processing
